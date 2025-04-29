@@ -10,27 +10,30 @@ A high-performance file system search and monitoring tool that provides instant 
   - Exact filename matches
   - Filename contains matches
   - Path contains matches
-- **Cross-platform Support**: Works on both Windows and Unix-like systems
 - **Efficient Caching**: Uses a memory-efficient approach to maintain the file system cache
 - **Privilege Handling**: Automatically handles elevated privileges when needed
 
 ## Requirements
 
 - Python 3.10 or higher
-- Windows or Unix-like operating system
+- Windows operating system
 - Administrative privileges (for initial cache creation)
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/wsl.git
+git clone https://github.com/404-5971/wsl
 cd wsl
 ```
 
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
+```
+or
+```bash
+uv sync
 ```
 
 3. Configure the file path:
@@ -42,11 +45,6 @@ pip install -r requirements.txt
 ### Windows
 ```bash
 build.bat
-```
-
-### Unix/Linux
-```bash
-./build.sh
 ```
 
 This will create two executables in the `dist` directory:
@@ -61,9 +59,6 @@ This will create two executables in the `dist` directory:
 ```bash
 # Windows
 WSL_init.exe
-
-# Unix/Linux
-./WSL_init
 ```
 
 2. The initialization process will scan your file system and create a cache. This may take some time depending on your system size.
@@ -75,9 +70,6 @@ WSL_init.exe
 ```bash
 # Windows
 myWSL.exe
-
-# Unix/Linux
-./myWSL
 ```
 
 2. Enter your search term when prompted. The tool will search through the cached file system and display results in three categories:
